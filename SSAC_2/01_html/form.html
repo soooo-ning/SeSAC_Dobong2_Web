@@ -13,7 +13,7 @@
 
     <br>
     <label for="emailId">email</label>
-    <input type="email" id="emailId" placeholder="example@naver.com">
+    <input type="email" id="emailId" placeholder="example@naver.com" disabled>
 
     <br>
     <label>
@@ -37,7 +37,7 @@
     <br>
 
     <h5>다음 중 input type이 아닌 것은? (모두 고르시오)</h5>
-    <input type="checkbox" name="input"> text
+    <input type="checkbox" name="input" disabled> text
     <input type="checkbox" name="input"> click
     <input type="checkbox" name="input"> img
     <input type="checkbox" name="input"> date
@@ -49,7 +49,7 @@
       title
     </label>
     <label>
-      <input type="radio" name="img">
+      <input type="radio" name="img" disabled>
       value
     </label>
     <label>
@@ -62,18 +62,30 @@
     <input type="radio" name="img" id="type">
     <label for="type">type</label>
 
-     <br>  
+    <br>
+    <br>
 
+    <!-- id, name 이름을 지을 때
+    1. 첫 글자는 숫자가 오면 안된다.
+    2. 되도록이면 전부 영어로 이름 짓끼
+    3. _(언더바)는 가능하지만 -(하이픈)불가능!!!
+      _ 외의 특수문자 불가능 
+    -->
     <!-- select -->
     <select name="flower">
       <optgroup>
         <option value="장미">장미</option>
         <option value="동백꽃">동백꽃</option>
       </optgroup>
-      <option value="매화">매화</option>
-      <option value="목련">목련</option>
+      <optgroup>
+        <option value="매화">매화</option>
+        <option value="목련">목련</option>
+      </optgroup>
     </select>
+
+    <br>
+    <textarea cols="30" rows="10" placeholder="하고싶은말"></textarea>
   </form>
 </body>
 
-</html>
+</html>            
