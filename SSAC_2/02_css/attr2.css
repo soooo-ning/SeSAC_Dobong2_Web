@@ -150,7 +150,7 @@ html {
   background-color: tomato;
 }
 
-.square > img[alt='pooh 사진'] {
+.square>img[alt='pooh 사진'] {
   width: 200px;
 }
 
