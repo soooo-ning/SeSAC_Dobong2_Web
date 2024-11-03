@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습 14</title>
+  <style>
+    .container {
+      width: 2000px;
+      height: 1200px;
+      background-color: rgb(224, 224, 224);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .beach {
+      width: 600px;
+      height: 400px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) skewY(30deg);
+      transition: 1s;
+    }
+
+    .beach:hover {
+      transform: translateY(-50%) skewY(0deg);
+      z-index: 4;
+      cursor: pointer;
+    }
+
+    .beach1 {
+      background-image: url(../img/beach1.jpg);
+      z-index: 3;
+      left: 400px;
+    }
+
+    .beach2 {
+      background-image: url(../img/beach2.jpg);
+      z-index: 2;
+    }
+
+    .beach3 {
+      background-image: url(../img/beach3.jpg);
+      z-index: 1;
+      right: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="beach beach1"></div>
+    <div class="beach beach2"></div>
+    <div class="beach beach3"></div>
+  </div>
+</body>
+
+</html>
