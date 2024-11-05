@@ -54,7 +54,6 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(sum2);
 
-
 // 1 이상 20 이하의 수 중에서 짝수만 더한 값 출력하기
 let sum3 = 0;
 for (let i = 1; i <= 20; i++) {
