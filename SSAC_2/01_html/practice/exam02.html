@@ -1,64 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 2 - form 만들기 실습</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습 2 - form 만들기 실습</title>
-</head>
-
-<body>
-  <h3>설문조사</h3>
-  <!-- label 태그
+  <body>
+    <h3>설문조사</h3>
+    <!-- label 태그
       - for 속성을 이용해서 연결할 수 있음
       - for 이용하면 id 와 함께 동작함
       - 체크박스나 버튼 등의 요소가 아닌 텍스트를 눌러도 선택할 수 있기 때문에
         사용자 편의성 높일 수 있음
   -->
-  <label for="name">이름</label>
-  <input type="text" id="name">
-  <br>
+    <label for="name">이름</label>
+    <input type="text" id="name" />
+    <br />
 
-  <label for="email">email</label>
-  <input type="email" id="email" placeholder="example@naver.com">
-  <br>
+    <label for="email">email</label>
+    <input type="email" id="email" placeholder="example@naver.com" />
+    <br />
 
-  <h4>나이</h4>
-  <label>
-    <input type="radio" name="age" checked>10대
-  </label>
-  <label>
-    <input type="radio" name="age">20대
-  </label>
-  <label>
-    <input type="radio" name="age">30대
-  </label>
-  <label>
-    <input type="radio" name="age">40대
-  </label>
-  <label>
-    <input type="radio" name="age">50대
-  </label>
-  <label>
-    <input type="radio" name="age">60대 이상
-  </label>
-  <br>
+    <h4>나이</h4>
+    <label> <input type="radio" name="age" checked />10대 </label>
+    <label> <input type="radio" name="age" />20대 </label>
+    <label> <input type="radio" name="age" />30대 </label>
+    <label> <input type="radio" name="age" />40대 </label>
+    <label> <input type="radio" name="age" />50대 </label>
+    <label> <input type="radio" name="age" />60대 이상 </label>
+    <br />
 
-  <h4>원하는 강의(복수응답 가능합니다.)</h4>
-  <label>
-    <input type="checkbox" name="class" checked>html
-  </label>
-  <label>
-    <input type="checkbox" name="class">javascript
-  </label>
-  <label>
-    <input type="checkbox" name="class">css
-  </label>
-  <br>
-  <br>
+    <h4>원하는 강의(복수응답 가능합니다.)</h4>
+    <label> <input type="checkbox" name="class" checked />html </label>
+    <label> <input type="checkbox" name="class" />javascript </label>
+    <label> <input type="checkbox" name="class" />css </label>
+    <br />
+    <br />
 
-  <textarea cols="80" rows="10" placeholder="하고 싶은 말을 써주세요:)"></textarea>
-  <input type="submit" value="제출">
-</body>
-
+    <textarea cols="80" rows="10" placeholder="하고 싶은 말을 써주세요:)"></textarea>
+    <input type="submit" value="제출" />
+  </body>
 </html>
