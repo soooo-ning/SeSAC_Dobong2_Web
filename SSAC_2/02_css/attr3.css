@@ -15,6 +15,7 @@ div {
 
 .position-static {
   background-color: pink;
+
   /* position static이 default값 */
   /* static은 이동 불가능! top, bottom, left, right 속성 영향 x */
   position: static;
@@ -24,6 +25,7 @@ div {
 
 .position-relative {
   background-color: aquamarine;
+
   /* position relative의 기준은 자기 자신 */
   /* 자신의 자리는 남아있음! 문서 흐름을 해치지 않음 */
   position: relative;
@@ -62,7 +64,7 @@ div {
   border: 3px dotted dodgerblue;
 }
 
-.parent>.circle {
+.parent > .circle {
   width: 100px;
   height: 100px;
   border-radius: 50%;

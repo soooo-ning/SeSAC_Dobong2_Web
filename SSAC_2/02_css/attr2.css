@@ -8,7 +8,7 @@
 
   /* 여백 적용, padding은 내부 여백, margin은 외부 여백 */
   padding: 10px;
-  margin: 10px
+  margin: 10px;
 }
 
 .d-inline {
@@ -46,13 +46,13 @@
   background-color: red;
 }
 
-.parent>.min {
+.parent > .min {
   min-width: 400px;
   background-color: orange;
   height: 100px;
 }
 
-.parent>.max {
+.parent > .max {
   max-width: 400px;
   height: 100px;
   background-color: violet;
@@ -115,6 +115,7 @@ html {
 
 .rounded {
   border-radius: 10%;
+
   /* 단축속성 */
   border-radius: 5px 10px 20px 40px;
   border-radius: 5px 20px 50px;
@@ -150,7 +151,7 @@ html {
   background-color: tomato;
 }
 
-.square>img[alt='pooh 사진'] {
+.square > img[alt='pooh 사진'] {
   width: 200px;
 }
 

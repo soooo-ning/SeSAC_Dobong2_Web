@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 6 - 가상클래스 선택자 실습 2</title>
+    <style>
+      .stripes {
+        background-color: navy;
+        color: white;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습 6</title>
-  <style>
-    .stripes {
-      background-color: navy;
-      color: white;
-    }
+      .stripes > *:nth-child(4n + 2) {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
 
-    .stripes>div:nth-child(4n+2) {
-      background-color: yellow;
-      color: black;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="stripes">
-    <div>navy</div>
-    <div>yellow</div>
-    <div>navy</div>
-    <div>navy</div>
-    <div>navy</div>
-    <div>yellow</div>
-    <div>navy</div>
-    <div>navy</div>
-    <div>navy</div>
-    <div>yellow</div>
-    <div>navy</div>
-  </div>
-</body>
-
+  <body>
+    <div class="stripes">
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>navy</div>
+      <div>yellow</div>
+      <div>navy</div>
+    </div>
+  </body>
 </html>

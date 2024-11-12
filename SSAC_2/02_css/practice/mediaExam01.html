@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media query 실습</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        border: 1px solid red;
+        border-radius: 5%;
+        margin: 5px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .box {
+          background-color: lightblue;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

@@ -1,102 +1,100 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 11</title>
+    <style>
+      .container {
+        position: relative;
+        width: 550px;
+        height: 550px;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습 11</title>
-  <style>
-    .container {
-      position: relative;
-      width: 550px;
-      height: 550px;
-    }
+      .container > .items {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+      }
 
-    .container>.items {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      position: absolute;
-    }
+      .circle1 {
+        background-color: rgb(15, 41, 158);
+        left: 100px;
+        top: 100px;
+      }
 
-    .circle1 {
-      background-color: rgb(15, 41, 158);
-      left: 100px;
-      top: 100px;
-    }
+      .eye1 {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 5;
+      }
 
-    .eye1 {
-      width: 40px;
-      height: 40px;
-      background-color: white;
-      border-radius: 50%;
-      position: absolute;
-      left: 20px;
-      top: 20px;
-      z-index: 5;
-    }
+      .eye2 {
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        z-index: 10;
+      }
 
-    .eye2 {
-      width: 20px;
-      height: 20px;
-      background-color: black;
-      border-radius: 50%;
-      position: absolute;
-      left: 20px;
-      top: 30px;
-      z-index: 10;
-    }
+      .circle2 {
+        background-color: rgb(45, 73, 196);
+        left: 160px;
+        top: 130px;
+      }
 
-    .circle2 {
-      background-color: rgb(45, 73, 196);
-      left: 160px;
-      top: 130px
-    }
+      .circle3 {
+        background-color: rgb(78, 105, 223);
+        left: 200px;
+        top: 180px;
+      }
 
-    .circle3 {
-      background-color: rgb(78, 105, 223);
-      left: 200px;
-      top: 180px;
-    }
+      .circle4 {
+        background-color: rgb(136, 154, 235);
+        left: 230px;
+        top: 230px;
+      }
 
-    .circle4 {
-      background-color: rgb(136, 154, 235);
-      left: 230px;
-      top: 230px;
-    }
+      .circle5 {
+        background-color: rgb(180, 192, 243);
+        left: 290px;
+        top: 250px;
+        z-index: 10;
+      }
 
-    .circle5 {
-      background-color: rgb(180, 192, 243);
-      left: 290px;
-      top: 250px;
-      z-index: 10;
-    }
+      .grass {
+        background-image: url('../img/grass.png');
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        bottom: 10;
+        z-index: 0;
+        position: absolute;
+        bottom: 0px;
+      }
+    </style>
+  </head>
 
-    .grass {
-      background-image: url("/SSAC_2/02_css/img/grass.png");
-      width: 100%;
-      height: 300px;
-      background-repeat: no-repeat;
-      bottom: 10;
-      z-index: 0;
-      position: absolute;
-      bottom: 0px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="items circle1">
-      <div class="eye1"></div>
-      <div class="eye2"></div>
+  <body>
+    <div class="container">
+      <div class="items circle1">
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+      </div>
+      <div class="items circle2"></div>
+      <div class="items circle3"></div>
+      <div class="items circle4"></div>
+      <div class="items circle5"></div>
+      <div class="grass"></div>
     </div>
-    <div class="items circle2"></div>
-    <div class="items circle3"></div>
-    <div class="items circle4"></div>
-    <div class="items circle5"></div>
-    <div class="grass"></div>
-  </div>
-</body>
-
+  </body>
 </html>

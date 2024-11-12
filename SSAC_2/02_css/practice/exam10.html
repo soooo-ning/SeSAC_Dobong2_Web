@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 10</title>
+    <style>
+      .container {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #ffe600 10%, #ff0080, #db20db);
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>실습 10</title>
-  <style>
-    .container {
-      width: 300px;
-      height: 300px;
-      position: relative;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #FFE600, #FF0080, #DB20DB)
-    }
+      .items {
+        border-radius: 50%;
+      }
 
-    .items {
-      border-radius: 50%;
-    }
+      .item1 {
+        width: 290px;
+        height: 290px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: white;
+        z-index: 5;
+      }
 
-    .item1 {
-      width: 290px;
-      height: 290px;
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      background-color: white;
-      z-index: 5;
-    }
+      .item2 {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        background-position: center;
+        background-image: url('../img/tree.jpg');
+      }
 
-    .item2 {
-      width: 280px;
-      height: 280px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 10;
-      background-position: center;
-      background-image: url("/SSAC_2/02_css/img/tree.jpg");
-    }
+      .item3 {
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 15;
+        background-position: center;
+        background-image: url('../img/26139_img.png');
+        background-size: contain;
+      }
+    </style>
+  </head>
 
-    .item3 {
-      width: 280px;
-      height: 280px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 15;
-      background-position: center;
-      background-image: url("/SSAC_2/02_css/img/26139_img.png");
-      background-size: contain;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <div class="items item1"></div>
-    <div class="items item2"></div>
-    <div class="items item3"></div>
-  </div>
-</body>
-
+  <body>
+    <div class="container">
+      <div class="items item1"></div>
+      <div class="items item2"></div>
+      <div class="items item3"></div>
+    </div>
+  </body>
 </html>
