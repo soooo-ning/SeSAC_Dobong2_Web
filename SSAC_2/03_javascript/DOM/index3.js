@@ -1,9 +1,7 @@
-/* 
-동작의 종류: click, dblclick, scroll, change, submit, ...
-- addEventListener(동작의 종류, function(){})
-- <태그 onchange="함수의이름()" onclick="함수의이름()"></태그>
-   on[동작의 종류] 속성으로 이벤트 제어 가능
-*/
+// 동작의 종류: click, dblclick, scroll, change, submit, ...
+// - addEventListener(동작의 종류, function(){})
+// - <태그 onchange="함수의이름()" onclick="함수의이름()"></태그>
+//   on[동작의 종류] 속성으로 이벤트 제어 가능
 
 const btn1 = document.querySelector('.btn--black');
 const btn2 = document.querySelector('.btn--green');
@@ -22,7 +20,7 @@ btn1.addEventListener('mouseover', function () {
   this.style.backgroundColor = 'aqua';
 });
 
-// ** btn2를 눌렀을 때, div를 자식으로 붙이기
+// btn2를 눌렀을 때, div를 자식으로 붙이기
 const container = document.getElementById('container');
 btn2.addEventListener('click', () => {
   let div = document.createElement('div');
@@ -32,7 +30,7 @@ btn2.addEventListener('click', () => {
   container.append(div);
 });
 
-// ** btn3
+// btn3
 // 만들어진 div의 배경색 변경
 // 함수 호출시 괄호 필수적으로 생략해야함, 괄호 작성시 즉시 호출
 btn3.addEventListener('click', changeColor);
@@ -47,7 +45,7 @@ function changeColor() {
   // 막내요소만 노랑색으로 변경
 }
 
-// ** btn4
+// btn4
 // 배경색 노란색으로 변경, 글자색 검정색으로 변경
 btn3.addEventListener('click', changeBtnColor);
 btn4.addEventListener('click', changeBtnColor);
@@ -56,7 +54,7 @@ function changeBtnColor() {
   this.style.color = '#000';
 }
 
-// *btn5
+// btn5
 // alert창 띄우기
 function sayHi() {
   alert('안녕하세요!! 버튼5입니다!!');
@@ -66,7 +64,7 @@ function sayHi() {
 const btn = document.querySelector('button');
 const input = document.querySelector('input');
 
-/* 1. [클릭 이벤트] */
+// [클릭 이벤트]
 btn.addEventListener('click', function (event) {
   // 클릭 이벤트에 관한 정보 (event 객체)
   console.log(event);
@@ -75,8 +73,8 @@ btn.addEventListener('click', function (event) {
   console.log(event.target);
 });
 
-// ======================================
-/* 2. [키보드 이벤트] */
+// =====================================
+// [키보드 이벤트]
 input.addEventListener('keydown', function (event) {
   // console.log(event)
 
@@ -97,8 +95,8 @@ input.addEventListener('keydown', function (event) {
   }
 });
 
-// =============================================
-/* 3. [scroll 이벤트] */
+// =====================================
+// [scroll 이벤트]
 // console.log(window)
 
 window.addEventListener('scroll', event => {
@@ -112,9 +110,9 @@ window.addEventListener('scroll', event => {
   }
 });
 
-// =============================================
+// =====================================
 // 폼이벤트
-/* 4. [submit] */
+// [submit]
 const todoForm = document.querySelector('#todo-form'); // form 태그
 const todos = document.querySelector('.todos'); // ul 태그
 
@@ -146,8 +144,8 @@ todoForm.addEventListener('submit', function (e) {
   todoInput.value = '';
 });
 
-// ================================
-// change 이벤트
+// =====================================
+// [change 이벤트]
 const chgInput = document.querySelector('#change-input');
 chgInput.addEventListener('change', function () {
   console.log('changed!!!');

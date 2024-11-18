@@ -1,9 +1,8 @@
-/* 1. 태그 내부 내용 */
-/* 
-- innerText
-- textContent
-- innerHTML
-*/
+// 태그 내부 내용
+// - innerText
+// - textContent
+// - innerHTML
+
 let div1 = document.getElementById('div1');
 div1.innerText = '     여기는 <b>첫번째</b> 태그입니다.&hearts;     /';
 // 2칸이상의 공백문자 제거, 앞뒤로 공백문자 제거
@@ -15,16 +14,14 @@ div1.textContent = '     여기는 <b>첫번째</b> 태그입니다.&hearts;    
 console.log(div1.textContent);
 
 // 속성에 접근
-/**
- * 요소.속성명
- * getAttribute(): 속성값 가져오기
- * setAttribute(): 속성값 설정하기
- *
- */
+// - 요소.속성명
+// - getAttribute(): 속성값 가져오기
+// - setAttribute(): 속성값 설정하기
 
 // pooh, naver 아이디
 let naver = document.getElementById('naver');
 console.log(naver);
+
 // naver.setAttribute("속성이름", "바꿔줄 속성값")
 naver.setAttribute('href', 'https://www.google.com');
 console.log(naver.href);
@@ -33,7 +30,7 @@ console.log(naver.getAttribute('href'));
 console.log(document.querySelector('#pooh').src);
 document.querySelector('#pooh').alt = '푸사진';
 
-/* 3. CSS 변경 */
+// CSS 변경
 let h1 = document.querySelector('h1');
 let list = document.querySelectorAll('li');
 // console.log(h1);
@@ -107,7 +104,6 @@ container.append(p2, p3, '안녕하세요');
 // prepend(): 선택된 요소의 맨 앞 자식으로 추가
 // friends = document.querySelector('#friends');
 // li 태그를 만들고, "캉가", friends 클래스 추가
-
 let li = document.createElement('li');
 li.textContent = '캉가';
 li.classList.add('friends');
@@ -136,3 +132,27 @@ let ul = firstLi.parentElement;
 
 ul.removeChild(firstLi);
 // 부모요소.removeChild(삭제할 자식 요소)
+
+// {/* <div class="container">
+//   <p>새로 추가된 p</p>
+//   <p>p2</p>
+//   <p>p3</p>
+//   안녕하세요
+
+//   <div>
+//     <img src="./img/image.png" alt="이요르 사진" />
+//     <span>이요르</span>
+//   </div>
+// <div> */}
+
+const parentDiv = document.querySelector('.container');
+const img = document.createElement('img');
+const span = document.createElement('span');
+const div = document.createElement('div');
+
+span.innerText = '이요르';
+img.setAttribute('src', './img/image.png');
+img.alt = '이요르 사진';
+
+div.append(img, span);
+parentDiv.append(div);
