@@ -1,17 +1,14 @@
-/* if */
-/*
-if(조건식) {
-  조건식이 참일 때 실행할 문장
-}
-*/
+// if
 
+// if(조건식) {
+//   조건식이 참일 때 실행할 문장
+// }
 if (5 > 3) {
   console.log('조건이 참입니다.');
 }
 
 // let number = Number(prompt('숫자를 입력해주세요.'));
 let number = 100;
-
 if (number > 10) {
   console.log('입력받은 수가 10보다 큽니다.');
 } else {
@@ -41,7 +38,7 @@ if (number >= 90 && number <= 100) {
   console.log('F');
 }
 
-/* 조건문 중첩 */
+// 조건문 중첩
 let userId = 'user01';
 let userPw = '1234qwer';
 
@@ -52,9 +49,9 @@ function loginUser() {
   if (userId === promptId) {
     if (userPw === promptPw) {
       console.log('로그인 성공');
-      alert("안녕하세요.." + userId + "님!!");
+      alert('안녕하세요..' + userId + '님!!');
     } else {
-      alert("비밀번호가 틀렸습니다!");
+      alert('비밀번호가 틀렸습니다!');
     }
   } else if (promptId === '') {
     alert('아이디를 입력하지 않았습니다!!');
@@ -68,7 +65,6 @@ function loginUser() {
 // switch문
 
 // let a = Number(prompt('숫자를 입력해주세요.'));
-
 let a = 5;
 
 // switch의 괄호에는 조건이 아닌 값이 들어감
@@ -98,16 +94,16 @@ if (num % 2 === 1) {
 }
 
 // 조건 ? 참일 때 : 거짓일 때
-num % 2 === 1 ? console.log('홀수') : console.log('짝수')
+num % 2 === 1 ? console.log('홀수') : console.log('짝수');
 
 let fruit = 'banana';
-const value = fruit === "banana" ? "yellow" : "red";
+const value = fruit === 'banana' ? 'yellow' : 'red';
 console.log(value);
 
 let value2;
-if (fruit === "banana") {
-  value2 = "yellow";
+if (fruit === 'banana') {
+  value2 = 'yellow';
 } else {
-  value2 = "red";
+  value2 = 'red';
 }
 console.log(value2);

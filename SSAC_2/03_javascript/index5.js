@@ -1,8 +1,7 @@
-/* for문
- for(변수 선언과 초기화; 조건식(어디까지 감소, 증가할건지); 증감) {
-    반복 실행 코드
- }
- */
+// for문
+// for(변수 선언과 초기화; 조건식(어디까지 감소, 증가할건지); 증감) {
+//   반복 실행 코드
+// }
 
 // 증감식: i++, i=i+1, i+=1
 for (let i = 0; i < 10; i++) {
@@ -41,13 +40,12 @@ for (let i = 0; i < fruits.length; i++) {
 let n = 11;
 let sum = 0;
 // 반복문을 사용해서 덧셈 만들기
-/* 
-3
-sum = 0
-sum = sum + 1 > 1
-sum = sum + 2 > 3
-sum = sum + 3 > 6
-*/
+
+// 3
+// sum = 0
+// sum = sum + 1 > 1
+// sum = sum + 2 > 3
+// sum = sum + 3 > 6
 for (let i = 1; i <= n; i++) {
   sum += i;
 }
@@ -85,7 +83,7 @@ for (let i = 0; i < 10; i++) {
   sum5 = sum5 + i;
 }
 
-console.log(sum5) // 0 ~ 10 까지의 홀수 합, 25
+console.log(sum5); // 0 ~ 10 까지의 홀수 합, 25
 
 for (let i = 0; i < 5; i++) {
   console.log('--------');
@@ -102,39 +100,38 @@ for (let i = 2; i < 10; i++) {
   }
 }
 
-/* while문 */
+// while문
 let n1 = 1;
-while(n1<=5){
-    console.log(n1);
-    n1++;
+while (n1 <= 5) {
+  console.log(n1);
+  n1++;
 }
 
 let n2 = 9;
-while(n2 >= 5){
-    console.log(n2);
-    n2--;
+while (n2 >= 5) {
+  console.log(n2);
+  n2--;
 }
 
 // while문을 이용해서 10부터 1까지 홀수만 출력
-let n3 =10;
-while(n3 >= 1){
-    if(n3%2===1)
-        console.log(n3);
-    n3--;
+let n3 = 10;
+while (n3 >= 1) {
+  if (n3 % 2 === 1) console.log(n3);
+  n3--;
 }
 
-let a=0
-while(true){
-    console.log(a);
-    a++;
-    if(a > 10){
-        break;
-    }
+let a = 0;
+while (true) {
+  console.log(a);
+  a++;
+  if (a > 10) {
+    break;
+  }
 }
 
-let a2=0;
-while(confirm("계속 진행하시겠습니까?")){
-    // 확인 > true, 취소 > false
-    a2++;
-    alert(`${a2}번째 alert 창`);
+let a2 = 0;
+while (confirm('계속 진행하시겠습니까?')) {
+  // 확인 > true, 취소 > false
+  a2++;
+  alert(`${a2}번째 alert 창`);
 }
