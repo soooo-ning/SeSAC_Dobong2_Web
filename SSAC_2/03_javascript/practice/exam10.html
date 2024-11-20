@@ -68,9 +68,9 @@
         let minute = now.getMinutes();
         dateTd.textContent = `${year}-${month}-${day} ${hour}:${minute}`;
 
-        tr.appendChild(writerTd, contentTd, dateTd);
+        tr.append(writerTd, contentTd, dateTd);
 
-        table.appendChild(tr);
+        table.append(tr);
 
         writerInput.value = '';
         contentInput.value = '';
