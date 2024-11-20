@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 내용 변경해보기</title>
+  </head>
+
+  <body>
+    <div>민트 초코는 <span>맛있다 >_<</span></div>
+  </body>
+  <script defer>
+    let text = document.querySelector('span');
+    text.innerText = '맛없다 --;;';
+    text.style.color = 'red';
+    text.style.fontWeight = '500';
+  </script>
+</html>
