@@ -1,6 +1,11 @@
 <html>
   <head>
     <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
       integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
       crossorigin="anonymous"
@@ -47,11 +52,12 @@
       // TODO2: changeColor 함수 내부 작성
       // red 클래스를 가지고 있으면
       // orange 클래스로 switchClass
-
       function changeColor() {
         for (let i = 0; i < colors.length; i++) {
           if ($('div').hasClass(colors[i])) {
-            $('div').switchClass(colors[i], colors[i + 1]);
+            let nextColor = i === colors.length - 1 ? colors[0] : colors[i + 1];
+            $('div').switchClass(colors[i], nextColor);
+            break;
           }
         }
       }
