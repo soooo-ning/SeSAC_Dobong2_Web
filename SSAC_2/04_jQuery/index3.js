@@ -16,9 +16,9 @@ $('.p-msg').click(function () {
 //   $(this).css('color', 'green'); // 자기 자신을 가리킴
 // });
 
-$('.num').on('click', function () {
-  $(this).css('color', 'pink'); // 자기 자신을 가리킴
-});
+// $('.num').on('click', function () {
+//   $(this).css('color', 'pink'); // 자기 자신을 가리킴
+// });
 
 // in JS (19~21 라인 까지의 동작과 동일)
 const nums = document.querySelectorAll('.num');
@@ -43,21 +43,19 @@ $(window).scroll(function () {
   console.log('scrolling....');
 });
 
-/* 
-input.addEventListener('keydown',function(event){
-    if(event.code==="ArrowLeft"){
-        console.log('왼쪽 방향키 눌렸습니다.')
-    }else if(event.code==="ArrowRight"){
-        console.log('오른쪽 방향키 눌렸습니다.')
-    }else if(event.code ==="ArrowUp"){
-        console.log('위쪽 방향키 눌렸습니다.')
-    }else if(event.code==="ArrowDown"){
-        console.log('아래쪽 방향키 눌렸습니다.')
-    }else{
-        console.log('방향키가 아닌 키보드 누르는 중...')
-    }
-})
-*/
+// input.addEventListener('keydown',function(event){
+//     if(event.code==="ArrowLeft"){
+//         console.log('왼쪽 방향키 눌렸습니다.')
+//     }else if(event.code==="ArrowRight"){
+//         console.log('오른쪽 방향키 눌렸습니다.')
+//     }else if(event.code ==="ArrowUp"){
+//         console.log('위쪽 방향키 눌렸습니다.')
+//     }else if(event.code==="ArrowDown"){
+//         console.log('아래쪽 방향키 눌렸습니다.')
+//     }else{
+//         console.log('방향키가 아닌 키보드 누르는 중...')
+//     }
+// })
 
 $('.input-key').keydown(function (e) {
   console.log(e.code);

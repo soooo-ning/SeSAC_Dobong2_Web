@@ -8,7 +8,9 @@ $('button').css('color', 'red');
 function submitjs() {
   // <div id="div1"></div>;
   document.getElementById('div1').innerText = '반갑습니다!!';
-  document.getElementById('div1').setAttribute('style', 'border: 2px solid red');
+  document
+    .getElementById('div1')
+    .setAttribute('style', 'border: 2px solid red');
 }
 
 function submitjQ() {

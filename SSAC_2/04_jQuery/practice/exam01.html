@@ -13,25 +13,18 @@
     <script>
       function changeImg(name) {
         // name: apple or banana or grape or peach
-        if (name === 'apple') {
-          $('img').attr('src', '../img/apple.jpg');
-        } else if (name === 'banana') {
-          $('img').attr('src', '../img/bananas.jpg');
-        } else if (name === 'grape') {
-          $('img').attr('src', '../img/grapes.jpg');
-        } else if (name === 'peach') {
-          $('img').attr('src', '../img/peaches.jpg');
-        }
+        $('img').attr('src', `../img/${name}.jpg`);
       }
     </script>
   </head>
+
   <body>
     <!-- 필요하다면 이미지 경로 변경 -->
     <img src="../img/q.jpg" alt="과일" width="230px" height="200px" />
     <br />
     <button onclick="changeImg('apple')">사과</button>
-    <button onclick="changeImg('banana')">바나나</button>
-    <button onclick="changeImg('grape')">포도</button>
-    <button onclick="changeImg('peach')">복숭아</button>
+    <button onclick="changeImg('bananas')">바나나</button>
+    <button onclick="changeImg('grapes')">포도</button>
+    <button onclick="changeImg('peaches')">복숭아</button>
   </body>
 </html>
