@@ -8,10 +8,10 @@ class House {
     this.year = year;
     this.window = window;
   }
+
   getAge() {
     console.log(`${this.name}은 건축한지 ${2024 - this.year}년 되었어요.`);
   }
-
   getWindow() {
     console.log(`${this.name}의 창문은 ${this.window}개 입니다.`);
   }

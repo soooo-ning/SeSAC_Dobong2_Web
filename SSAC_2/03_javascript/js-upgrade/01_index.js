@@ -133,7 +133,7 @@ function test2(...val) {
 test2(2, 3, 4, 5, 6, 7, 8);
 
 // quiz~
-// 매개변수가 몇 개가 들어오든 합해서 반환하는 함수를
+// 매개변수가 몇 개가 들어오든 합해서 반환하는 함수
 
 function addNumber(...rest) {
   // console.log(rest);
