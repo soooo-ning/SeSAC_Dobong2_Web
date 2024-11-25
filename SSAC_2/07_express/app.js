@@ -14,6 +14,7 @@ app.use('/static', express.static(__dirname + '/public'));
 app.get('/', (request, response) => {
   // request : 클라이언트가 서버에게 보내는 요청
   // response : 서버가 클라이언트에게 보내는 응답
+
   // console.log(request);
   // response.send('hello express!!!!');
   response.render('test', {
@@ -47,6 +48,7 @@ app.get('/register', (req, res) => {
   });
 });
 
+// 404 처리
 app.use((req, res) => {
   res.render('404');
 });

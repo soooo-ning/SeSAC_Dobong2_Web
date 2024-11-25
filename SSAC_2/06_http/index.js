@@ -7,7 +7,6 @@ const server = http.createServer((request, response) => {
   console.log('url: ', request.url);
 
   // response
-  // response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
   // response.write('<p>응답1</p>');
   // response.write('<p>응답2</p>');
   // response.write('<p>응답3</p>');
