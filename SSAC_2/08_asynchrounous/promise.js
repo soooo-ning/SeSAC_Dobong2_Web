@@ -31,6 +31,7 @@ function exec() {
     })
     .catch(err => {
       console.log('err?', err);
+      // reject로 전달된 값
     })
     .finally(() => {
       console.log('집으로 돌아갑니다.');

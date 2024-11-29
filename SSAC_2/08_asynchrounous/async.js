@@ -28,6 +28,19 @@ async function exec() {
   } catch (err) {
     console.log(err);
   }
+  // .then((result) => {
+  //   // pickDrink가 끝나고 나서 실행되는 작업
+  //   pay();
+  //   console.log("result?", result);
+  //   // result는 resolve로 전달된 값
+  // })
+  // .catch((err) => {
+  //   console.log("err?", err);
+  //   // reject로 전달된 값
+  // })
+  // .finally(() => {
+  //   console.log("집으로 돌아갑니다.");
+  // });
 }
 
 let price, product;

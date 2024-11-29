@@ -1,1 +1,6 @@
 node_modules/
+
+# *.txt → 확장자가 txt로 끝나는 파일 모두 무시
+# !test.txt → test.txt는 무시되지 않음.
+# test/ → test 이름의 폴더 내부의 모든 파일을 무시
+# /test → (현재 폴더) 내에 존재하는 폴더 내부의 모든 파일 무시

@@ -7,16 +7,16 @@ const server = http.createServer((request, response) => {
   console.log('url: ', request.url);
 
   // response
-  // response.write('<p>응답1</p>');
+  // response.write('<p>응답1</p>'); // 응답 본문 작성
   // response.write('<p>응답2</p>');
   // response.write('<p>응답3</p>');
-  // response.end('<h3>응답 종료</h3>');
+  // response.end('<h3>응답 종료</h3>'); // 응답 본문 작성 후 응담
 
   try {
     // try문
     // 실행코드
     const data = fs.readFileSync('./inex.html');
-    response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+    response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' }); // 응답 헤더 작성
     response.end(data);
   } catch (err) {
     // try문에서 어떤 에러가 발생되었는지 error 객체를 넘겨줌 (생략가능)
