@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제 1</title>
+  </head>
+  <body>
+    <h2>get으로 정보받기</h2>
+    <form action="/getPractice1" method="get">
+      <!-- 이름 입력 -->
+      <div class="form-group">
+        <label> 이름: <input type="text" name="name" /> </label>
+      </div>
+      <br />
+
+      <!-- 성별 선택 -->
+      <div class="form-group">
+        <label>성별</label><br />
+        <label> <input type="radio" name="gender" value="남자" /> 남자 </label>
+        <label> <input type="radio" name="gender" value="여자" /> 여자 </label>
+      </div>
+      <br />
+
+      <!-- 생년월일 선택 -->
+      <div class="form-group">
+        <label>생년월일</label><br />
+        <select name="year" id="yearSelect"></select>
+        년
+        <select name="month" id="monthSelect"></select>
+        월
+        <select name="day" id="daySelect"></select>
+        일
+      </div>
+      <br />
+
+      <!-- 관심사 선택 -->
+      <div class="form-group">
+        <label>관심사</label><br />
+        <div id="interestsContainer"></div>
+      </div>
+
+      <!-- 제출 버튼 -->
+      <div class="form-group">
+        <button type="submit">회원가입</button>
+      </div>
+    </form>
+
+    <script>
+      // 년도 옵션
+      const yearSelect = document.getElementById('yearSelect');
+      for (let i = 2000; i <= 2010; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        if (i === 2010) option.selected = true;
+        yearSelect.appendChild(option);
+      }
+
+      // 월 옵션
+      const monthSelect = document.getElementById('monthSelect');
+      for (let i = 1; i <= 12; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        monthSelect.appendChild(option);
+      }
+
+      // 일 옵션
+      const daySelect = document.getElementById('daySelect');
+      for (let i = 1; i <= 31; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        daySelect.appendChild(option);
+      }
+
+      // 관심사 체크박스
+      const interests = [
+        { value: 'vacation', label: '여행' },
+        { value: 'fashion', label: '패션' },
+        { value: 'food', label: '음식' },
+      ];
+
+      const interestsContainer = document.getElementById('interestsContainer');
+      interests.forEach(interest => {
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.name = 'favorite';
+        input.value = interest.value;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(' ' + interest.label));
+        interestsContainer.appendChild(label);
+        interestsContainer.appendChild(document.createTextNode(' '));
+      });
+    </script>
+  </body>
+</html>
