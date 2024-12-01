@@ -33,6 +33,7 @@
       />
       <!-- required: 필수속성 -->
       <br />
+
       <label for="pw">PW</label>
       <input
         type="password"
@@ -79,6 +80,7 @@
         id="input"
       />
       <br />
+
       <span>우편물 수령 장소</span>
       <label> <input type="checkbox" name="mail" value="자택" />자택</label>
       <label> <input type="checkbox" name="mail" value="회사" />회사</label>
@@ -100,7 +102,6 @@
 
         if (form.id2.value.trim() === '') {
           alert('아이디를 입력해주세요');
-
           // return false를 해야만 submit 이벤트를 막을 수 있음
           return false;
         }
@@ -111,9 +112,10 @@
         // checkbox 상태가 둘 다 false라면 return false
         console.log(form.mail[0].checked);
         console.log(form.mail[1].checked);
+
         if (form.mail[0].checked == false && form.mail[1].checked == false) {
           // if (!form.mail[0].checked && !form.mail[1].checked) {
-          alert('우편물 수렁 장소를 선택해주세요.');
+          alert('우편물 수령 장소를 선택해주세요.');
           return false; // 이벤트 막기
         }
       }

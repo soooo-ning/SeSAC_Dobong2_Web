@@ -53,8 +53,6 @@ app.post('/js-form-check', (req, res) => {
 // practice1, practice2.ejs 에는 각각 get, post를 통한 폼 요청이 있고
 // 결과 페이지는 practice_result.ejs를 공통으로 사용
 
-// API 4개 작업해야함
-
 // 1. practice1에 대한 GET 요청
 app.get('/practice1', (req, res) => {
   res.render('practice/practice1');

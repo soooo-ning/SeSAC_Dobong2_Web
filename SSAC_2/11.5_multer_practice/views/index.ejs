@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>multer 사용</title>
+    <link rel="stylesheet" href="/static/css/index.css" />
+  </head>
+
+  <body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label><span>아이디</span><input type="text" name="id" required /></label>
+      <label
+        ><span>비밀번호</span><input type="password" name="password" required
+      /></label>
+      <label><span>이름</span><input type="text" name="name" required /></label>
+      <label
+        ><span>나이</span><input type="number" name="age" required
+      /></label>
+      <label
+        ><span>프로필 사진</span><input type="file" name="userfile" required
+      /></label>
+
+      <div class="button-group">
+        <button type="reset">리셋</button>
+        <button type="submit">회원가입</button>
+      </div>
+    </form>
+  </body>
+</html>

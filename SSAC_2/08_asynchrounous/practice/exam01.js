@@ -19,29 +19,29 @@ function hell(cb) {
   }, 1000);
 }
 
-// 콜백 함수 실행
-// call('kim', name => {
-//   console.log(name + '반가워');
-//   back(txt => {
-//     console.log(txt + '을 실행했구나');
-//     hell(message => {
-//       console.log('여기는 ' + message);
-//     });
-//   });
-// });
+call('kim', name => {
+  console.log(name + '반가워');
+  back(txt => {
+    console.log(txt + '을 실행했구나');
+    hell(message => {
+      console.log('여기는 ' + message);
+    });
+  });
+});
 
+// 콜백 함수로 이루어진 코드를 Promise로 변경하기
 function callPromise(name) {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
+  return new Promise(resolve => {
+    setTimeout(() => {
       console.log(name);
-      resolve(name); // cb 대신 resolve로 값 넘기기
+      resolve(name);
     }, 1000);
   });
 }
 
 function backPromise() {
-  return new Promise((resolve, reject) => {
-    setTimeout(function () {
+  return new Promise(resolve => {
+    setTimeout(() => {
       console.log('back');
       resolve('back');
     }, 1000);
@@ -49,15 +49,13 @@ function backPromise() {
 }
 
 function hellPromise() {
-  // reject 생략 가능
   return new Promise(resolve => {
-    setTimeout(function () {
+    setTimeout(() => {
       resolve('callback hell');
     }, 1000);
   });
 }
 
-// then ~ catch
 callPromise('kim')
   .then(result => {
     console.log(result + ' 반가워');
@@ -67,14 +65,13 @@ callPromise('kim')
     // txt = 이전 then의 리턴값 = "back"
     console.log(txt + '을 실행했구나');
     return hellPromise();
-    // return "안녕하세요";
   })
   .then(msg => {
     console.log('여기는 ' + msg);
   });
 
-//   async/await
-async function execute() {
+// Promise로 바꾼 코드를 exec함수를 만들어서 실행
+async function exec() {
   const name = await callPromise('allie');
   console.log(name + '반가워');
   const back = await backPromise();
@@ -83,4 +80,4 @@ async function execute() {
   console.log('여기는 ' + hell);
 }
 
-execute();
+exec();
