@@ -11,9 +11,24 @@ app.set('views', './views');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-/* API */
+// API
 app.get('/', (req, res) => {
   res.render('index');
+});
+
+// ajax 요청
+// /ajax GET
+app.get('/ajax', (req, res) => {
+  console.log(req.query);
+  // res.send("응답!");
+  res.send(req.query);
+});
+
+// /ajax POST
+app.post('/ajax', (req, res) => {
+  // body-parser 설정을 해야 req.body를 읽을 수 있음
+  console.log(req.body);
+  res.send(req.body);
 });
 
 // axios 요청
@@ -56,14 +71,16 @@ app.get('/api', (req, res) => {
 });
 
 // 실습문제
-// const realId = "banana";
-// const realPw = "4321";
 app.get('/practice1', (req, res) => {
-  res.render('pracrice/practice1');
+  res.render('practice/practice1');
 });
+
 app.get('/practice2', (req, res) => {
-  res.render('pracrice/practice2');
+  res.render('practice/practice2');
 });
+
+const realId = 'banana';
+const realPw = '4321';
 
 // /axios-practice1 GET
 app.get('/axios-practice1', (req, res) => {

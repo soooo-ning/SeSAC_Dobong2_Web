@@ -82,10 +82,10 @@
 
         // ----- ajax 요청 -----
         // 보낼 데이터 객체형태로 만들기
-        // const data = {
-        //   name: form.name.value, //"이름.."
-        //   gender: form.gender.value, //"여성", "남성"
-        // };
+        const data = {
+          name: form.name.value, //"이름.."
+          gender: form.gender.value, //"여성", "남성"
+        };
 
         // ajax 사용
         $.ajax({
@@ -94,13 +94,13 @@
           data: data, // 서버로 넘겨줄 데이터
 
           //   통신이 성공했을 때
-          success: function (res) {
+          success: res => {
             // 통신 이후에 일어날 일들..
             console.log(res);
             resultBox.textContent = `GET /ajax 요청 완료! ${res.name}의 성별은 ${res.gender}`;
           },
           //   통신이 실패했을 때
-          error: function (err) {
+          error: err => {
             console.log('err', err);
           },
         });
@@ -117,12 +117,12 @@
           type: 'post',
           url: '/ajax',
           data: data,
-          success: function (data) {
+          success: data => {
             console.log(data);
             resultBox.textContent = `POST /ajax 요청 완료!
           ${data.name}의 성별은 ${data.gender}`;
           },
-          error: function (err) {
+          error: err => {
             console.log(err);
           },
         });
@@ -162,15 +162,15 @@
         // ----- axios 요청 보내기 -----
         // 1. then ~ catch 사용
         // axios({
-        //   method: "get",
-        //   url: "/axios",
+        //   method: 'get',
+        //   url: '/axios',
         //   params: data, // get 요청일 때는 params에 담아서 요청
         // })
-        //   .then(function (response) {
+        //   .then( response => {
         //     // 통신에 성공했을 때
         //     console.log(response);
         //     // {name:'allie', gender:'여성'} 그대로 뜨지 않음
-        //     console.log("--------");
+        //     console.log('--------');
         //     console.log(response.data); // 서버에서 준 데이터
         //     // console.log(response.status);
         //     // console.log(response.statusText);
@@ -178,11 +178,11 @@
         //     // console.log(response.config);
         //     resultBox.textContent = `GET /axios 요청 완료!
         //   ${response.data.name}의 성별은 ${response.data.gender}`;
-        //     resultBox.style.color = "green";
+        //     resultBox.style.color = 'green';
         //   })
-        //   .catch(function (err) {
+        //   .catch( err => {
         //     // 통신에 실패했을 때
-        //     console.error("error!!!!!!!!!");
+        //     console.error('error!!!!!!!!!');
         //     console.error(err);
         //   });
 
@@ -202,6 +202,7 @@
           console.err(err);
         }
       }
+
       async function axiosPost() {
         const form = document.forms['register'];
         const data = {
