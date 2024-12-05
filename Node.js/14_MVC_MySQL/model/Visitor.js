@@ -11,7 +11,7 @@ exports.getVisitors = cb => {
   // DB 연결전
   // return [
   //   { id: 1, name: '홍길동', comment: '내가 왔다' },
-  //   { id: 2, name: '이찬혁', comment: '으라차차' },
+  //   { id: 2, name: '이찬혁', comment: '야호!!!' },
   // ];
 
   // DB 연결후
