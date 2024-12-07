@@ -130,7 +130,12 @@ app.post('/dynamicUpload', uploadDetail.single('dynamicFile'), (req, res) => {
 
   // 하나의 객체에 합쳐서 보내는 방법
   // res.send({ ...req.body, ...req.file });
-  res.send({ file: req.file, fileInfo: req.body });
+  // res.send({ file: req.file, fileInfo: req.body });
+  res.send({
+    path: req.file.path.replace(/\\/g, '/'), // 백슬래시를 슬래시로 변환
+    file: req.file,
+    fileInfo: req.body,
+  });
 });
 
 app.listen(PORT, () => {

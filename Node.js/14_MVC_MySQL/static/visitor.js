@@ -53,7 +53,7 @@ function createVisitor() {
 
 // 방명록 "삭제"
 // DELETE /visitor
-function deleteVisitor(id) {
+function deleteVisitor(btn, id) {
   console.log(id);
   console.log(btn); // 태그
   axios({
