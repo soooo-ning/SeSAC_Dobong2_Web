@@ -12,8 +12,6 @@ app.use('/static', express.static(__dirname + '/static'));
 const indexRouter = require('./routes');
 app.use('/', indexRouter);
 
-// const visitorRouter = require();
-
 // 404 에러처리
 app.get('*', (req, res) => {
   res.render('404');

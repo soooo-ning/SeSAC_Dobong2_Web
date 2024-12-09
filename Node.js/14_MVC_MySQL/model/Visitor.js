@@ -100,7 +100,19 @@ exports.patchVisitor = (data, cb) => {
     (err, rows) => {
       if (err) throw err;
       console.log('Visitor.js 수정', rows);
-      cb(rows);
+
+      // OkPacket {
+      // fieldCount: 0,
+      // affectedRows: 1,
+      // insertId: 0,
+      // serverStatus: 2,
+      // warningCount: 0,
+      // message: '(Rows matched: 1  Changed: 0  Warnings: 0',
+      // protocol41: true,
+      // changedRows: 0
+      //   }
+
+      cb();
     },
   );
 };
