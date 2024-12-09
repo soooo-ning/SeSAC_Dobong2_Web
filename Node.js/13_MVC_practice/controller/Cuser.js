@@ -16,6 +16,7 @@ exports.login = (req, res) => {
   const { realId, realPw } = User.getUserInfo(); //{ realId: 'banana', realPw: '1234' }
   // console.log("-----");
   // console.log(realId, realPw);
+
   const { userId, userPw } = req.body;
   if (realId === userId && realPw === userPw) {
     res.send({ userInfo: req.body, isSuccess: true });
@@ -27,11 +28,10 @@ exports.login = (req, res) => {
 // POST '/login2'
 exports.login2 = (req, res) => {
   // console.log(User.user);
-  /* 
-  apple//1234//사과사과
-  banana//4321//바나나나나
-  cocoa//qwer1234//미떼
-  */
+  // apple//1234//사과사과
+  // banana//4321//바나나나나
+  // cocoa//qwer1234//미떼
+
   const users = []; // [{realId, realPw, name},..]
   const userIds = []; // ["apple","banana","cocoa"]
   const userData = User.user.split('\n');
@@ -46,9 +46,10 @@ exports.login2 = (req, res) => {
     users.push(userObj);
     userIds.push(userInfoArr[0]);
   });
+
   // console.log("users", users);
   // console.log("userIds", userIds);
-  // //// 요청 정보를 바탕으로 회원이 맞는지 확인
+  // 요청 정보를 바탕으로 회원이 맞는지 확인
   const idx = userIds.indexOf(req.body.userId);
   // ["a", "b", "c"].indexOf("c"); // 2
   // ["a", "b", "c"].indexOf("d"); // -1

@@ -42,9 +42,9 @@
     <div class="result"></div>
     <script>
       const result = document.querySelector('.result');
+
       function clickLogin() {
         const form = document.forms['login'];
-
         const data = {
           userId: form.userId.value,
           userPw: form.userPw.value,
@@ -78,10 +78,10 @@
             console.error('err!', err);
           });
       }
+
       async function clickLogin2() {
         try {
           const form = document.forms['login'];
-
           const data = {
             userId: form.userId.value,
             userPw: form.userPw.value,
@@ -93,6 +93,7 @@
           });
           console.log(response);
           console.log(response.data);
+
           if (response.data.isSuccess) {
             result.textContent = `${response.data.userName}님 환영합니다!
             로그인 성공!`;
