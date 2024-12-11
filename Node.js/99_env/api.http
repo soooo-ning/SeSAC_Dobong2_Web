@@ -1,11 +1,12 @@
-@server = http://localhost:8080
+@server=http://localhost:8080
 
+### GET /
 GET {{server}}/
 
-### post 요청
+### post요청
 POST {{server}}/test
-Content-Type: application/json; charset=UTF-8
+Content-type: application/json; charset=UTF-8
 
 {
-  "name":"엘리",
+  "name":"allie"
 }
