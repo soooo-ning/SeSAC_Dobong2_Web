@@ -52,7 +52,6 @@ exports.postVisitor = (data, cb) => {
     (err, rows) => {
       if (err) throw err;
       console.log('model post', rows);
-
       // OkPacket {
       //   fieldCount: 0,
       //   affectedRows: 1,
@@ -74,7 +73,6 @@ exports.deleteVisitor = (id, cb) => {
   conn.query(`DELETE FROM visitor WHERE id=${id}`, (err, rows) => {
     if (err) throw err;
     console.log('모델 Visitor.js 특정 데이터 삭제');
-
     // OkPacket {
     //   fieldCount: 0,
     //   affectedRows: 1,
