@@ -52,6 +52,7 @@ exports.postVisitor = (data, cb) => {
     (err, rows) => {
       if (err) throw err;
       console.log('model post', rows);
+
       // OkPacket {
       //   fieldCount: 0,
       //   affectedRows: 1,
@@ -73,6 +74,7 @@ exports.deleteVisitor = (id, cb) => {
   conn.query(`DELETE FROM visitor WHERE id=${id}`, (err, rows) => {
     if (err) throw err;
     console.log('모델 Visitor.js 특정 데이터 삭제');
+
     // OkPacket {
     //   fieldCount: 0,
     //   affectedRows: 1,
@@ -98,7 +100,19 @@ exports.patchVisitor = (data, cb) => {
     (err, rows) => {
       if (err) throw err;
       console.log('Visitor.js 수정', rows);
-      cb(rows);
+
+      // OkPacket {
+      // fieldCount: 0,
+      // affectedRows: 1,
+      // insertId: 0,
+      // serverStatus: 2,
+      // warningCount: 0,
+      // message: '(Rows matched: 1  Changed: 0  Warnings: 0',
+      // protocol41: true,
+      // changedRows: 0
+      //   }
+
+      cb();
     },
   );
 };
