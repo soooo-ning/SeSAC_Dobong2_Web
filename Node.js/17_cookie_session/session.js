@@ -41,7 +41,6 @@ app.get('/set', (req, res) => {
 // 세션 확인(가져오기)
 app.get('/get', (req, res) => {
   console.log(req.session);
-  console.log(req.session);
   console.log(req.sessionID);
   res.send({ id: req.sessionID, name: req.session.name });
 });
