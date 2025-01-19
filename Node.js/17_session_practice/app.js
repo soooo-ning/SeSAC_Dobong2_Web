@@ -59,7 +59,7 @@ app.post('/login', (req, res) => {
   } else {
     res.send(`
       <script>
-        alert("아이디 또는 비밀번호가 틀렸어요. 다시 시도하세요.");
+        alert("아이디 또는 비밀번호가 틀렸습니다. 다시 시도하세요.");
         document.location.href="/login";
       </script>
       `);
@@ -79,7 +79,7 @@ app.get('/logout', (req, res) => {
   } else {
     res.send(`
       <script>
-        alert("이미 세션이 만료되었어요.");
+        alert("이미 세션이 만료되었습니다.");
         document.location.href="/";
       </script>
       `);
