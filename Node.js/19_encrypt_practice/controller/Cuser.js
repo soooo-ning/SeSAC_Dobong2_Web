@@ -1,4 +1,3 @@
-const { compare } = require('bcrypt');
 const { User } = require('../models');
 const bcrypt = require('bcrypt');
 

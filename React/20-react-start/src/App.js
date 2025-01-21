@@ -1,6 +1,6 @@
 import ClassComp from './ClassComp';
 import UseJSX from './UseJSX';
-import Exam01 from './practice/Exam01';
+import { Exam01, Exam02, Exam03 } from './practice/Exam01';
 
 function App() {
   return (
@@ -8,7 +8,10 @@ function App() {
       <div></div>
       <UseJSX />
       <ClassComp />
+
       <Exam01 />
+      <Exam02 />
+      <Exam03 />
     </div>
   );
 }

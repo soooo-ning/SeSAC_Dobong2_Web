@@ -1,5 +1,6 @@
 export default function UseJSX() {
   // return <h1>hello, react</h1>;
+
   // - inline style 사용해보기
   // const divStyle = {
   //   width: '100px',
@@ -9,6 +10,7 @@ export default function UseJSX() {
   //   marginLeft: '.5rem',
   //   display: 'inline-block',
   // };
+
   // return (
   //   <div>
   //     <div style={{ color: '#fff', background: 'red' }}>first</div>
@@ -16,9 +18,11 @@ export default function UseJSX() {
   //     <div style={divStyle}>third</div>
   //   </div>
   // );
+
   // - JS문법 사용해보기
   // let isShow = true;
   // let str = 'allie';
+
   // return (
   //   <div>
   //     <div style={{ backgroundColor: 'red' }}>
@@ -37,6 +41,7 @@ export default function UseJSX() {
   //     <div>{str}님 안녕하세요.</div>
   //   </div>
   // );
+
   // - onclick 사용
   function myFunc() {
     alert('안녕 내 이름은 allie야');
