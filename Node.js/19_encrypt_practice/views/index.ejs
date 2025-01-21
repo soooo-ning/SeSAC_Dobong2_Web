@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <%- include('include/include', {title: 'Home'}) %>
+  </head>
+  <body>
+    <h1>Main Page</h1>
+
+    <% if (isLogin) { %>
+    <p><%=user%>님 환영합니다 🙌🏻</p>
+    <a href="/logout">로그아웃</a>
+    <% } else { %>
+    <p>메인 페이지입니다.🎈</p>
+    <a href="/signup">회원가입</a>
+    <a href="/login">로그인</a>
+    <% } %>
+  </body>
+</html>

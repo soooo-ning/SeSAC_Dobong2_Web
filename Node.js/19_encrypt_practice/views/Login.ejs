@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <%- include('include/include', {title: 'Login'}) %>
+  <link rel="stylesheet" href="/static/login.css" />
+
+  <body>
+    <div class="login-box">
+      <h1>로그인</h1>
+
+      <form name="form_login">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="userid">ID</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="id input"
+            aria-describedby="id"
+            name="userid"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="pw">PW</span>
+          <input
+            type="password"
+            class="form-control"
+            aria-label="pw input"
+            aria-describedby="pw"
+            name="pw"
+          />
+        </div>
+
+        <button type="button" class="btn btn-dark" onclick="login();">
+          Login
+        </button>
+        <br />
+        <a href="/">Main 이동하기</a>
+      </form>
+    </div>
+
+    <script>
+      function login() {
+        const form = document.forms['form_login'];
+
+        if (!form.userid.value || !form.pw.value) {
+          alert('항목을 모두 기입해주세요.');
+          return;
+        }
+
+        axios({
+          method: 'post',
+          url: '/login',
+          data: {
+            userid: form.userid.value,
+            pw: form.pw.value,
+          },
+        })
+          .then(res => {
+            if (res.data) {
+              alert('로그인 완료되었습니다.');
+              document.location.href = '/';
+            } else {
+              alert('아이디 또는 비밀번호가 틀렸습니다.');
+              form.reset();
+            }
+          })
+          .catch(err => {
+            console.error(err);
+            alert('로그인 중 오류가 발생했습니다.');
+          });
+      }
+    </script>
+  </body>
+</html>
